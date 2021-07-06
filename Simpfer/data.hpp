@@ -133,10 +133,10 @@ void input_matrix() {
 
 	if (dataset_id == 0 || dataset_id == 1 || dataset_id == 2 || dataset_id == 3) {
 
-		if (dataset_id == 0) f_name = "../../dataset/movielens_mf-50.txt";
-		if (dataset_id == 1) f_name = "../../dataset/netflix_mf-50.txt";
-		if (dataset_id == 2) f_name = "../../dataset/yahoosong_mf-50.txt";
-		if (dataset_id == 3) f_name = "../../dataset/amazon_mf-50.txt";
+		if (dataset_id == 0) f_name = "dataset/movielens_mf-50.txt";
+		if (dataset_id == 1) f_name = "dataset/netflix_mf-50.txt";
+		if (dataset_id == 2) f_name = "dataset/yahoosong_mf-50.txt";
+		if (dataset_id == 3) f_name = "dataset/amazon_mf-50.txt";
 
 		// file input
 		std::ifstream ifs_file(f_name);
