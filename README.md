@@ -10,13 +10,26 @@
 
 ## How to use
 * Parameter configuration can be done via txt files in `parameter` directory.
+* Dataset should be stored in `dataset` directory.
+	* We assign a unique dataset ID for each dataset. You can freely assign it.
+	* In `input_matrix()` of `data.hpp`, you can freely write codes for reading your dataset.
 * Computation time will be stored in `result` directory.
 * Compile: `g++ -O3 -o simpfer.out main.cpp -std=c++14 -fopenmp -Wall`
 * Run: `./simpfer.out`
 
-### Dataset IDs
-- 0: MovieLens
-- 1: Netflix
-	- Netflix is zipped. Dataset files have to be at "dataset" directory.
-- 2: Yahoo!
-- 3: Amazon
+
+## Citation
+If you use our implementation, please cite the following paper.
+``` 
+@inproceedings{amagata2021reverse,  
+    title={Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?},  
+    author={Amagata, Daichi and Hara, Takahiro},  
+    booktitle={RecSys},  
+    pages={xx--xx},  
+    year={2021}  
+}
+``` 
+
+## License
+Copyright (c) 2021 Daichi Amagata  
+This software is released under the [MIT license](https://github.com/amgt-d1/Simpfer/blob/main/license.txt).
