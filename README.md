@@ -6,7 +6,7 @@
 ## Requirement
 * Linux OS (Ubuntu).
    * The others have not been tested.
-* `g++ 7.4.0` (or higher version) and `Openmp`.
+* `g++ 7.5.0` (or higher version) and `Openmp`.
 
 ## How to use
 * Parameter configuration can be done via txt files in `parameter` directory.
