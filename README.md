@@ -1,7 +1,7 @@
 ## Introduction
 * This repository provides an implementation of Simpfer.
 * This is a fast algorithm for reverse k-MIPS problem.
-* As for the details about Simpfer, please read our RecSys2021 paper, [Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?](https://).
+* As for the details about Simpfer, please read our RecSys2021 paper, [Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?](https://dl.acm.org/doi/10.1145/3460231.3474229).
 
 ## Requirement
 * Linux OS (Ubuntu).
