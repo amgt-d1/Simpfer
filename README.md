@@ -25,7 +25,7 @@ If you use our implementation, please cite the following paper.
     title={Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?},  
     author={Amagata, Daichi and Hara, Takahiro},  
     booktitle={RecSys},  
-    pages={xx--xx},  
+    pages={273--281},  
     year={2021}  
 }
 ``` 
