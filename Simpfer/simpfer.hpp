@@ -10,7 +10,7 @@ void sequential_scan(data *user, const float ip_) {
         if (ip_ >= user->norm * item_set[i].norm) break;
 
         // top-k comp. complete
-        if (user->threshold >= user->norm * item_set[i].norm) break;
+        //if (user->threshold >= user->norm * item_set[i].norm) break;
 
         // compute ip
         const float ip = compute_ip(*user, item_set[i]);
