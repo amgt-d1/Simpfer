@@ -20,7 +20,7 @@ void sequential_scan(data *user, const float ip_) {
         user->update_topk(ip, item_set[i].identifier, k);
 
         // out from top-k
-        if (user->threshold > ip) break;
+        if (user->threshold > ip_) break;
     }
 }
 
