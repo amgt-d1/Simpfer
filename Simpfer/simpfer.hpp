@@ -43,7 +43,7 @@ void online_processing(const data &query_item) {
             float upperbound = block_set[i].member[0]->norm * norm;
 
             // block-level filtering
-            if (upperbound > block_set[i].lowerbound_array[k-1]) {
+            if (upperbound >= block_set[i].lowerbound_array[k-1]) {
 
                 for (unsigned int j = 0; j < block_set[i].member.size() - 1; ++j) {
 
@@ -55,7 +55,7 @@ void online_processing(const data &query_item) {
                     ++ip_count;
 
                     // comparison with lower-bound
-                    if (ip > user->lowerbound_array[k-1]) {
+                    if (ip >= user->lowerbound_array[k-1]) {
 
                         upperbound = user->norm * item_set[k-1].norm;
 
