@@ -24,35 +24,42 @@ unsigned int k = 0;
 // #threads
 unsigned int thread_num = 0;
 
+// approx factor
+float c = 1.0;
+
 
 // get current time
-void get_current_time() {
-
+void get_current_time()
+{
 	time_t t = time(NULL);
 	printf(" %s\n", ctime(&t));
 }
 
 // parameter input
-void input_parameter() {
-
+void input_parameter()
+{
 	std::ifstream ifs_dataset_id("parameter/dataset_id.txt");
 	std::ifstream ifs_sampling_rate("parameter/sampling_rate.txt");
 	std::ifstream ifs_thread_num("parameter/thread_num.txt");
 	std::ifstream ifs_k("parameter/k.txt");
 
-	if (ifs_dataset_id.fail()) {
+	if (ifs_dataset_id.fail())
+	{
 		std::cout << " dataset_id.txt does not exist." << std::endl;
 		std::exit(0);
 	}
-	if (ifs_sampling_rate.fail()) {
+	if (ifs_sampling_rate.fail())
+	{
 		std::cout << " sampling_rate.txt does not exist." << std::endl;
 		std::exit(0);
 	}
-	if (ifs_k.fail()) {
+	if (ifs_k.fail())
+	{
 		std::cout << " k.txt does not exist." << std::endl;
 		std::exit(0);
 	}
-	if (ifs_thread_num.fail()) {
+	if (ifs_thread_num.fail())
+	{
 		std::cout << " thread_num.txt does not exist." << std::endl;
 		std::exit(0);
 	}
