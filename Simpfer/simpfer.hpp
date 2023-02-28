@@ -2,12 +2,13 @@
 
 
 // verification by sequential scan
-void sequential_scan(data *user, const float ip_) {
+void sequential_scan(data *user, const float ip_)
+{
 
-    for (unsigned int i = 0; i < item_set.size(); ++i) {
-
+    for (unsigned int i = 0; i < item_set.size(); ++i)
+    {
         // guarantee to be top-k
-        if (ip_ >= user->norm * item_set[i].norm) break;
+        if (ip_ >= user->norm * item_set[i].norm * c) break;
 
         // top-k comp. complete
         //if (user->threshold >= user->norm * item_set[i].norm) break;
@@ -25,8 +26,8 @@ void sequential_scan(data *user, const float ip_) {
 }
 
 // main operation
-void online_processing(const data &query_item) {
-
+void online_processing(const data &query_item)
+{
     start = std::chrono::system_clock::now();
 
     // norm computation
@@ -37,16 +38,16 @@ void online_processing(const data &query_item) {
     #pragma omp parallel num_threads(thread_num)
 	{
 		#pragma omp for schedule(dynamic) reduction(+:ip_count)
-        for (unsigned int i = 0; i < block_set.size(); ++i) {
-
+        for (unsigned int i = 0; i < block_set.size(); ++i)
+		{
             // compute upper-bound in this block
             float upperbound = block_set[i].member[0]->norm * norm;
 
             // block-level filtering
-            if (upperbound >= block_set[i].lowerbound_array[k-1]) {
-
-                for (unsigned int j = 0; j < block_set[i].member.size() - 1; ++j) {
-
+            if (upperbound >= block_set[i].lowerbound_array[k-1])
+			{
+                for (unsigned int j = 0; j < block_set[i].member.size() - 1; ++j)
+				{
                     // get user-vec
                     data* user = block_set[i].member[j];
 
@@ -55,13 +56,13 @@ void online_processing(const data &query_item) {
                     ++ip_count;
 
                     // comparison with lower-bound
-                    if (ip >= user->lowerbound_array[k-1]) {
-
-                        upperbound = user->norm * item_set[k-1].norm;
+                    if (ip >= user->lowerbound_array[k-1])
+					{
+                        upperbound = user->norm * item_set[k-1].norm * c;
 
                         // comparison with upper-bound
-                        if (upperbound > ip) {
-
+                        if (upperbound > ip)
+						{
                             // init topk
                             user->update_topk(ip, 0, k);
 
