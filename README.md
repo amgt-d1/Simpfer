@@ -4,7 +4,7 @@
 * As for the details about Simpfer, please read our RecSys2021 paper, [Reverse Maximum Inner Product Search: How to efficiently find users who would like to buy my item?](https://dl.acm.org/doi/10.1145/3460231.3474229).
 * If you want faster online time, visit [here](https://github.com/amgt-d1/Simpfer-plus-plus).
 	* This is an extended version of Simpfer.
-	* c-Simpfar presented in ACM TWEB is also available by changing c in `file_input.hpp' in this repository.
+	* c-Simpfar presented in ACM TWEB is also available by changing c in [`file_input.hpp'](https://github.com/amgt-d1/Simpfer/blob/main/Simpfer/file_input.hpp).
 
 ## Requirement
 * Linux OS (Ubuntu).
